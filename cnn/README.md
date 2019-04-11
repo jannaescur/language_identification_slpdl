@@ -8,4 +8,10 @@ Instead of applying a recursive network we will format the embeddings in a 1d ar
 The schema of the network are 3 convolution layers with 512 filters of different kernel_sizes that when combined provide different resolution context features (3 words, 4 words, 5 words) which is forwarded to the final classicator (fully connected layer).
 
 
- ![Octocat](assets/images/captura.png)
+![Octocat](assets/images/captura.png)
+![alt text](http://url/to/img.png)
+
+
+ <p align="left">
+  <img src="captura.png"/>
+</p>
