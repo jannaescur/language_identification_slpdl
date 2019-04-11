@@ -9,5 +9,5 @@ The schema of the network are 3 convolution layers with 512 filters of different
 
 
  <p align="left">
-  <img src="captura.png"/>
+  <img src="https://github.com/jannaescur/language_identification_slpdl/blob/master/cnn/captura.png"/>
 </p>
