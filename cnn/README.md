@@ -7,9 +7,15 @@ Instead of applying a recursive network we will format the embeddings in a 1d ar
 
 The schema of the network are 3 convolution layers with 512 filters of different kernel_sizes that when combined provide different resolution context features (3 words, 4 words, 5 words) which is forwarded to the final classicator (fully connected layer).
 
-
-
-
  <p align="left">
   <img src="captura.png"/>
 </p>
+
+Even though the idea looked promising we believe it would be more useful for semantic problems where we could even load pretrained embeddings such as GloVe thant using it for language identification where the characters may be more discriminative than words.
+
+## Conclusions:
+After having a lot of problems to make the net work we achieved to make it learn even though the performance is far far away from the LSTM character level baseline.
+
+Max(Training accuracy) = 76.73242490197241
+Min(Training loss) ) = 0.7
+
