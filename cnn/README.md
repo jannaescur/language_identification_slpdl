@@ -9,5 +9,5 @@ The schema of the network are 3 convolution layers with 512 filters of different
 
 
  <p align="left">
-  <img src="schema.png"/>
+  <img src="captura.png"/>
 </p>
