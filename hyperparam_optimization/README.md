@@ -11,9 +11,9 @@ solve in any of the approaches. In order to try to reduce the overfitting we imp
 - Make it harder for the network to learn (in order to generalize better):
   - Change network architecture:<br><br>
   Instead of one Linar layer, we used two of them with 1024 neurons:<br>
-        self.h2o = torch.nn.Sequential(torch.nn.Linear(hidden_size, 1024),
+        *self.h2o = torch.nn.Sequential(torch.nn.Linear(hidden_size, 1024),
                                       torch.nn.Dropout(),
-                                      torch.nn.Linear(1024, output_size))
+                                      torch.nn.Linear(1024, output_size))*
   
   
   - Use Dropout:<br>
@@ -23,9 +23,9 @@ solve in any of the approaches. In order to try to reduce the overfitting we imp
    Regularization basically adds the penalty as model complexity increases. Regularization parameter (lambda) penalizes all 
    the parameters except intercept so that model generalizes the data and won’t overfit.<br>
    
-    all_linear1_params = torch.cat([x.view(-1) for x in model.h2o.parameters()])
+    *all_linear1_params = torch.cat([x.view(-1) for x in model.h2o.parameters()])
             l2_regularization = 0.01 * torch.norm(all_linear1_params, 2)
-            loss+=l2_regularization<br>
+            loss+=l2_regularization*<br>
             
     where in this case lambda is 0.01.
     
@@ -35,7 +35,7 @@ solve in any of the approaches. In order to try to reduce the overfitting we imp
     
   - Progressively reduce the learning rate:<br>
   Finally, we also add a decay in the learning rate (using LRScheduler):<br>
-  scheduler_lr = torch.optim.lr_scheduler.StepLR(optimizer, step_size = 8, gamma = 0.5)<br>
+  *scheduler_lr = torch.optim.lr_scheduler.StepLR(optimizer, step_size = 8, gamma = 0.5)*<br>
   
     So with these parameters the learning rate is reduced by 0.5 every 8 epochs.
 
