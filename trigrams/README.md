@@ -19,7 +19,7 @@ the learning rate decay (every 4 epochs reduced by 0.5)... and instead of adding
 we decided to try weight decay in the optimizer (Adam), which has the same effect, with a decay of 4e-5:<br>
 *optimizer = torch.optim.Adam(model.parameters(), weight_decay=4e-5)<br>*
 
-Using this new and more interesting approach we reached an accuracy of 91.1%, which is very close to the baseline. (*Notebook:
+Using this new and more interesting approach we reached an accuracy of 91.1%, which is very close to the baseline.<br> (*Notebook:
 trigrams-lstm.ipynb*)<br><br>
 
 **Adding probabilities:**<br>
@@ -32,5 +32,4 @@ so we would not have redundancy and the network could learn better from the fed 
 the Kaggle kernel execution, it was pretty hard to make it work, so we finally decided to remove the n-grams that appear more
 times in the training set without taking into acount its labels (to which language they belong).<br>
 
-With this approach we got an accuracy of 92.3%, a little bit higher than using n-grams without the probability step. (*Notebook:
-trigrams-probabilities.ipynb*)
+With this approach we got an accuracy of 92.3%, a little bit higher than using n-grams without the probability step.<br> (*Notebook: trigrams-with-probabilities.ipynb*)
